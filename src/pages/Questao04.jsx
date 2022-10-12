@@ -7,7 +7,7 @@ export default function Questao04() {
   useEffect(()=>{
     fetch('https://restcountries.com/v2/region/africa?fields=name,population')
     .then(response => response.json())
-    .then(data => {setPais(data.reduce((prev,current)=>{return (prev.age > current.age) ? prev : current}))});
+    .then(data => {setPais(data.reduce((prev,current)=>{return (prev.attribute > current.attribute) ? prev : current}))});
   },[])
   return <>
     <br/>
